@@ -19,7 +19,7 @@ export class DemoButtonsComponent implements OnInit {
   listProfileInfo() {
     console.log('fired');
     console.log(this.fb.me().then((resp) => {
-      console.log(resp);
+      // console.log(resp);
     }));
     }
 
