@@ -1,5 +1,12 @@
 <input type="button" value="List Profile Info" (click)="listProfileInfo()">
 
 <h2>Name:</h2>
+<h3>{{this.name}}</h3>
 
-<h2>Prof Pic:</h2>
+<h2>Profile Picture:</h2>
+<h3><img src="{{picture?.data?.url}}" alt=""></h3>
+
+<h2>Posts:</h2>
+<ul>
+    <li *ngFor="let post of posts">{{post?.message}} {{post.created_time}}</li>
+</ul>

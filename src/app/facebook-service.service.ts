@@ -18,14 +18,17 @@ export class FacebookServiceService {
     }, { scope: 'user_friends' });
   }
 
- async me() {
-    const response = FB.api('/me?fields=id,name,first_name,gender,picture.width(150).height(150),age_range,friends',
+  me() {
+    FB.api('/me?fields=id,name,first_name,gender,picture.width(150).height(150),age_range,friends',
       (result) => {
         this.data = result;
         console.log(this.data);
-        return this.data;
+        // return this.data;
       });
-      return response;
+      return this.data;
+  //  fetch(FB.api('/me?fields=id,name,first_name,gender,picture.width(150).height(150),age_range,friends')).then((resp) => {
+  //    console.log(resp);
+  //  });
   }
 
 }

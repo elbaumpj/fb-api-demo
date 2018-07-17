@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>FacebookApi</title>
+  <title>Facebook API Demo</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,13 +12,13 @@
   <script src="//connect.facebook.net/en_US/sdk.js"></script>
   <script>
     FB.init({
-        appId: '183848609122403',
+        appId: '',
         autoLogAppEvents: true,
         xfbml: true,
         version: 'v3.0'
       });
   </script>
-  <fb:login-button scope="public_profile,email">
+  <fb:login-button scope="public_profile,email,user_posts">
   </fb:login-button>
   <app-root></app-root>
 </body>
